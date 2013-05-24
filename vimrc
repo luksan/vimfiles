@@ -5,6 +5,8 @@ execute pathogen#infect()
 syntax on
 filetype on
 filetype plugin indent on
+set modeline
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
 
@@ -24,8 +26,6 @@ map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 
 let g:pyflakes_use_quickfix = 0
-
-let g:pep8_map='<leader>8'
 
 " SuperTab code completion
 au FileType python set omnifunc=pythoncomplete#Complete
